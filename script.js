@@ -1,6 +1,7 @@
 q = console.log;
 
-const apiUrl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772";
+let apiUrl = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772";
+apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
 
 async function getData() {
   const response = await fetch(apiUrl);
@@ -12,6 +13,22 @@ async function getData() {
   list = data.meals[0];
   q(list);
 
+  //name1
+  q(list.strMeal);
+
+  //img
+  q(list.strMealThumb);
+
+  //categories
+  q(list.strCategory);
+  q(list.strArea);
+
+  //Instructions
+  q(list.strInstructions);
+
+  //Ingredients
+  q(list.strIngredient1);
+  q(list.strMeasure1);
   //   currencies = Object.keys(list);
   //   currenciesVlues = Object.values(list);
   //   currencies.forEach(function (value, index) {
@@ -30,4 +47,21 @@ async function getData() {
   //   console.log(list);
 }
 
+async function search(mealName) {
+  apiUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`;
+  const response = await fetch(apiUrl);
+  q(response);
+
+  const data = await response.json();
+  q(data);
+
+  list = data.meals;
+  for (let i = 0; i < list.length; i++) {
+    q(`name${i + 1}`, list[i].strMeal);
+    q(`imgUrl${i + 1}`, list[i].strMealThumb);
+  }
+}
+
 getData();
+
+search("steak");
