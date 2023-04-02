@@ -151,7 +151,11 @@ async function random() {
   document.getElementById("ingredients").innerHTML = "";
   let i = 1;
 
-  while (eval(`list.strIngredient${i}`) !== "" && i != 21) {
+  while (
+    eval(`list.strIngredient${i}`) !== "" &&
+    eval(`list.strIngredient${i}`) !== null &&
+    i != 21
+  ) {
     let newDiv = document.createElement("div");
     newDiv.innerText = `${eval(`list.strIngredient${i}`)} ${eval(
       `list.strMeasure${i}`
