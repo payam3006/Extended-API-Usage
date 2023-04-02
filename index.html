@@ -14,51 +14,45 @@
     <h1>Meal Finder</h1>
     <div class="mainAction">
         <div class="searchBox">
-            <input type="text" placeholder="Search for Meal or Keywords..">
+            <input id="mealFinder" type="text" placeholder="Search for Meal or Keywords..">
 
-            <button id="searchThat"><i class="fa fa-search"></i></button>
+            <button id="searchThat" onclick="search()"><i class="fa fa-search"></i></button>
         </div>
-        <button id="randomSearch"><i class="fa fa-random"></i></button>
+        <button id="randomSearch" onclick="random()"><i class="fa fa-random"></i></button>
     </div>
-    <div class="notify">Search resauls for 'steak';</div>
-    <div class="results">
-        <div class="result">
+    <div id="notify" class="notify"></div>
+    <div id="results" class="results">
+        <!-- <div class="result">
             <img id="r1" src="11.png" alt="">
             <div id="cover1" class="cover">name1</div>
-        </div>
-        <div class="result">
-            <img id="r2" src="" alt="">
-            <div id="cover2" class="cover">name2</div>
-        </div>
-        <div class="result">
-            <img id="r3" src="" alt="">
-            <div id="cover3" class="cover">name3</div>
-        </div>
+        </div> -->
+
 
     </div>
     <!-- /////////////////////////////// -->
-    <h2 id="title">name1</h2>
-    <img id="main" src="11.png" alt="">
-    <div id="categories">
+    <h2 id="title" class="hidden">name1</h2>
+    <img id="main" class="hidden" src="11.png" alt="">
+    <div id="categories" class="categories hidden">
         <p>sdvds</p>
         <p>ascds vb</p>
     </div>
-    <p id="instructions">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum ullam soluta quasi eius,
+    <p id="instructions" class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum ullam soluta
+        quasi eius,
         tempore
         veritatis officiis recusandae harum, tenetur inventore id iste nostrum nesciunt, blanditiis facilis debitis quod
         voluptatum ducimus?</p>
-    <h3>
+    <h3 id="ingredientsTitle" class="ingredients hidden">
         Ingredients
     </h3>
-    <div id="ingredients">
-
-        <div>sdfvdsvd</div>
-        <div>sdfsdccdcvdsvd</div>
-        <div>sdsvd</div>
-        <div>sdfaaxsvd</div>
-        <div>sdf</div>
-        <div>sdfvdsvd</div>
-        <div>sdfvd</div>
+    <div id="ingredients" class="ingredients">
+        <!-- 
+        <div>sdfvdsvd sdvsdbcvjksdbvijb</div>
+        <div>sdfsdccdcvdsvd dcvsdvvsv</div>
+        <div>sdsvd scasdcscsdcsdvsvdfbdfb</div>
+        <div>sdfaaxsvd cdce3456b45vyb5</div>
+        <div>sdf asc</div>
+        <div>sdfvdsvd dcvfvfdvfsdvf fg vbdbnthnhntsdfvsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfyntynetyet </div>
+        <div>sdfvd cedfawef</div>
         <div>vdsvd</div>
         <div>sdfvvdfdsvd</div>
         <div>sdfvvdsvd</div>
@@ -66,7 +60,7 @@
         <div>sdfsvd</div>
         <div>sdfvdhggsvd</div>
         <div>sdfvdfgdbdfdsvd</div>
-        <div>sdfv424svd</div>
+        <div>sdfv424svd</div> -->
 
 
     </div>
